@@ -31,23 +31,15 @@ Recommended: install the official Engram OpenCode integration too, so session cr
 engram setup opencode
 ```
 
-## Build
+## Install from npm
 
-```bash
-npm install
-npm run build
-```
-
-## OpenCode TUI config
-
-Add the plugin to OpenCode's TUI plugin list after building or publishing it.
-For local development, use `~/.config/opencode/tui.json`:
+Add the published package to your global OpenCode TUI config at `~/.config/opencode/tui.json`:
 
 ```json
 {
   "$schema": "https://opencode.ai/tui.json",
   "plugin": [
-    "file:///absolute/path/to/opencode-engram-session-panel/dist/index.js"
+    "opencode-engram-session-panel"
   ]
 }
 ```
@@ -61,12 +53,32 @@ Optional configuration:
   "$schema": "https://opencode.ai/tui.json",
   "plugin": [
     [
-      "file:///absolute/path/to/opencode-engram-session-panel/dist/index.js",
+      "opencode-engram-session-panel",
       {
         "baseUrl": "http://127.0.0.1:7437",
-        "project": "opencode-plugin"
+        "project": "my-project"
       }
     ]
+  ]
+}
+```
+
+## Build
+
+```bash
+npm install
+npm run build
+```
+
+## Local development config
+
+When developing from a local checkout, build the package and point OpenCode to the generated file:
+
+```json
+{
+  "$schema": "https://opencode.ai/tui.json",
+  "plugin": [
+    "file:///absolute/path/to/opencode-engram-session-panel/dist/index.js"
   ]
 }
 ```
