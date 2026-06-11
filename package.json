@@ -1,7 +1,7 @@
 {
-  "name": "opencode-engram-session-panel",
+  "name": "opencode-session-id",
   "version": "0.1.0",
-  "description": "OpenCode TUI sidebar panel for the active Engram session and its recent memories.",
+  "description": "OpenCode TUI plugin that copies the current OpenCode session ID.",
   "license": "MIT",
   "type": "module",
   "exports": {
@@ -17,10 +17,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@opencode-ai/plugin": "^1.15.13",
-    "@opentui/keymap": "^0.3.1",
-    "@opentui/solid": "^0.3.1",
-    "solid-js": "^1.9.10"
+    "@opencode-ai/plugin": "^1.15.13"
   },
   "devDependencies": {
     "@types/bun": "^1.3.3",
